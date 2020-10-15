@@ -15,4 +15,29 @@
 \begin{document}
 \title{Exercice 5 TD 3}
 \author{Pierre Goutagny, Guillaume Gatt}
+\maketitle
+2) On pose $n=(dim(E))$ \\
+Soit $(e_i)_{ 1\leq i \leq n}$ une base de E. \\
+On pose les endomorphismes $e_{i,j}$ de la manière suivant : \\
+$\forall (i,j,k) \in ^3,\ e_{i,j}(e_k)=\begin{cases}
+e_j \ si \ i=k \\
+0 \ sinon
+\end{cases}$ \\
+Montrons que $(e_{i,j})_{ 1\leq i,j \leq n}$ est une base de $Hom(E)$. \\
+On a $|(e_{i,j})_{ 1\leq i,j \leq n}|=n^2=dim(Hom(E))$. \\
+Montrons que cette famille est libre : \\
+On pose $k\%n$ le reste de la division euclidienne de k par n. \\
+On pose $k//n$ le quotient de la division euclidienne de k par n. \\
+On pose $u_k=e_{(k\%n)+1,(k//n)+1}$. \\
+Soit $\lambda_1,...,\lambda_{n^2}$ tel que $\sum_{k=1}^{n^2} \lambda_k u_k =0$ \\
+On donc pour tout $i \in [[1,n]]$ : \\
+$\sum_{k=1}^{n^2} \lambda_k u_k(e_i) =0$ \\
+$\sum_{k=0}^{n-1} \lambda_{kn+i} e_{(k+i)\% (n+1)} =0$ \\
+or la famille $(e_{(k+i)\% (n+1)})_{ 0\leq k\leq n-1}=(e_i)_{ 1\leq i\leq n}$ \\
+On a donc comme $(e_i)_{ 1\leq i \leq n}$ est libre : \\
+$\forall i \in [[1,n]] \forall k in [[0,n-1]], \lambda_{kn+i}=0$ \\
+On a donc :  $\forall k \in [[1,n^2]] lambda_k=0$ \\
+donc $(e_{i,j})_{ 1\leq i,j \leq n}$ est libre et a pour cardinal la dimension de Hom(E) donc c'est une base. \\ \\
+Montrons que $\overline{\psi} \circ \phi^{-1}(e_{i,j})=tr(e_{i,j})$ : \\
+Montrons que $\phi()$
 \end{document}
