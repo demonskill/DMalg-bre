@@ -12,14 +12,15 @@
 \geometry{ left=3cm, top=2cm, bottom=2cm, right=2cm}
 \usepackage{xcolor}
 \usepackage{amsmath}
+\usepackage{stmaryrd}
 \begin{document}
 \title{Exercice 5 TD 3}
-\author{Pierre Goutagny, Guillaume Gatt}
+\author{Guillaume Gatt, Pierre Goutagny}
 \maketitle
 2) On pose $n=(dim(E))$ \\
 Soit $(e_i)_{ 1\leq i \leq n}$ une base de E. \\
 On pose les endomorphismes $e_{i,j}$ de la manière suivant : \\
-$\forall (i,j,k) \in ^3,\ e_{i,j}(e_k)=\begin{cases}
+$\forall (i,j,k) \in \llbracket 1,n\rrbracket^3,\ e_{i,j}(e_k)=\begin{cases}
 e_j \ si \ i=k \\
 0 \ sinon
 \end{cases}$ \\
@@ -30,14 +31,31 @@ On pose $k\%n$ le reste de la division euclidienne de k par n. \\
 On pose $k//n$ le quotient de la division euclidienne de k par n. \\
 On pose $u_k=e_{(k\%n)+1,(k//n)+1}$. \\
 Soit $\lambda_1,...,\lambda_{n^2}$ tel que $\sum_{k=1}^{n^2} \lambda_k u_k =0$ \\
-On donc pour tout $i \in [[1,n]]$ : \\
+On donc pour tout $i \in \llbracket1,n\rrbracket$ : \\
 $\sum_{k=1}^{n^2} \lambda_k u_k(e_i) =0$ \\
 $\sum_{k=0}^{n-1} \lambda_{kn+i} e_{(k+i)\% (n+1)} =0$ \\
 or la famille $(e_{(k+i)\% (n+1)})_{ 0\leq k\leq n-1}=(e_i)_{ 1\leq i\leq n}$ \\
 On a donc comme $(e_i)_{ 1\leq i \leq n}$ est libre : \\
-$\forall i \in [[1,n]] \forall k in [[0,n-1]], \lambda_{kn+i}=0$ \\
-On a donc :  $\forall k \in [[1,n^2]] lambda_k=0$ \\
+$\forall i \in \llbracket1,n\rrbracket \forall k \in \llbracket0,n-1\rrbracket, \lambda_{kn+i}=0$ \\
+On a donc :  $\forall k \in \llbracket1,n^2\rrbracket \lambda_k=0$ \\
 donc $(e_{i,j})_{ 1\leq i,j \leq n}$ est libre et a pour cardinal la dimension de Hom(E) donc c'est une base. \\ \\
 Montrons que $\overline{\psi} \circ \phi^{-1}(e_{i,j})=tr(e_{i,j})$ : \\
-Montrons que $\phi()$
+Montrons que $\phi(e^\ast_i \otimes e_{j})= e_{i,j}$ \\
+$\phi(e^\ast_i \otimes e_{j})$  est l'application $z \rightarrow e^*_i(z)e_j$ \\
+Il s'agit donc de l'application qui pour $k\in \llbracket1,n\rrbracket$ : \\
+$\phi(e^\ast_i \otimes e_{j})(e_k)=\begin{cases}
+e_j \ si \ k=j \\
+0 \ sinon \\
+\end{cases}$ \\
+donc $\phi(e^\ast_i \otimes e_{j})= e_{i,j}$. \\
+On a donc $\overline{\psi} \circ \phi^{-1}(e_{i,j})= \overline{\psi}(e^\ast_i \otimes e_{j})=e^*_i(e_j)=\begin{cases}
+1 \ si \ i=j \\
+0 \ sinon \\
+\end{cases}=tr(e_{i,j})$ \\
+On a donc $\forall (i,j) \in \llbracket1,n\rrbracket^2,\overline{\psi} \circ \phi^{-1}(e_{i,j})=tr(e_{i,j})$ \\
+On a donc comme $(e_{i,j})_{ 1 \leq i,j \leq n}$ est une base on a pour $u \in Hom(E)$ : \\
+$\overline{\psi} \circ \phi^{-1}(u)=\overline{\psi} \circ \phi^{-1}(\sum_{ 1 \leq i,j\leq n} \lambda_{i,j} e_{i,j})=\sum_{ 1 \leq i,j\leq n} \lambda_{i,j}\overline{\psi} \circ \phi^{-1}(e_{i,j})=\sum_{ 1 \leq i,j\leq n}\lambda_{i,j} tr(e_{i,j})$ \\
+$\overline{\psi} \circ \phi^{-1}(u)= tr(\sum_{ 1 \leq i,j\leq n}\lambda_{i,j} e_{i,j})=tr(u)$ \\
+Donc $\overline{\psi} \circ \phi^{-1}=tr$
+
 \end{document}
