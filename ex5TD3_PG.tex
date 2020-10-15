@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsfonts, mathrsfs}
+\usepackage{amssymb}
+\usepackage{commath, mathtools}
+\DeclareMathOperator{\tr}{\mathrm{tr}}
+\DeclareMathOperator{\rg}{\mathrm{rg}}
+\def \r {{\ell(t)}}
+
+\title{Exercice 7}
+\author{Guillaume Gatt \and Pierre Goutagny}
+\date{20 Octobre 2020}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{enumerate}[1., start=1]
+    \item \begin{align*}
+            \psi \colon E^{\ast} \times E &\longrightarrow k \\
+                   (\lambda, x) &\longmapsto \lambda(x)
+          \end{align*}
+
+    \item
+
+    \item \'Ecrivons $t$ comme somme de $\r$ tenseurs simples :\\
+        $t = \sum_{i=1}^\r \lambda_i \otimes x_i$, avec $\lambda_i \in E^\ast$ et $x_i \in E$ pour $1 \leq i \leq \r$ \\
+        Soit $z\in \ker\varphi(t)$.\\
+        Alors $\sum_{i=1}^\r \lambda_i(z)x_i=0$\\
+        Or les $(x_i)_{1\leq i \leq \r}$ sont libres.
+
+        \par \setlength{\leftskip}{.2cm}
+            Sinon, un des $e_i$ est une combinaison linéaire des autres. Supposons sans perdre de généralité que ce soit $x_1$. Alors il existe $\mu_2, \ldots, \mu_\r$ des scalaires tels que $x_1 = \sum_{i=2}^\r\mu_i x_i$.\\
+            On a alors 
+            \begin{align*} t &= \sum_{i=1}^\r \lambda_i \otimes x_i \\
+                &= \lambda_1\otimes\left(\sum_{i=2}^\r\mu_i x_i \right) + \sum_{i=2}^\r \lambda_i \otimes x_i \\
+                &= \sum_{i=2}^\r (\lambda_i + \mu_i \lambda_1) \otimes x_i \text{\quad par bilinéarité de }\otimes
+            \end{align*}
+            Ainsi on peut écrire $t$ comme somme de $\r - 1$ vecteurs simples : contradiciton.
+
+        \par \setlength{\leftskip}{0cm}
+        Tous les $\lambda_i(z)$ sont donc nuls.\\
+        Donc $\displaystyle\ker\varphi(t) \subseteq \bigcap_{i=1}^\r\ker\lambda_i$\\
+        De plus on a l'inclusion réciproque :
+
+        \par \setlength{\leftskip}{.2cm}
+            En effet, si $z\in \bigcap_{i=1}^\r\ker\lambda_i$, on a
+            \begin{align*}
+                \varphi(t)(z) &= \sum_{i=1}^\r\lambda_i(z)x_i \\
+                              &= \sum_{i=1}^\r 0 \\
+                              &= 0
+            \end{align*}
+
+        \par \setlength{\leftskip}{0cm}
+        On en conclut que $\displaystyle\ker \varphi(t) = \bigcap_{i=1}^\r\ker\lambda_i$, puis l'égalité des dimensions.\\
+        Or les $\lambda_i$ sont libres, d'après le même argument que pour les $x_i$, donc $\displaystyle \dim\bigcap_{i=1}^\r\ker\lambda_i = n-\r$\\
+        Ainsi, en appliquant le théorème du rang à $\varphi(t)$, on obtient
+        \boxed{\rg\varphi(t) = \r}
+
+            
+\end{enumerate}
+\end{document}
+
