@@ -27,17 +27,12 @@ e_j \ si \ i=k \\
 Montrons que $(e_{i,j})_{ 1\leq i,j \leq n}$ est une base de $Hom(E)$. \\
 On a $|(e_{i,j})_{ 1\leq i,j \leq n}|=n^2=dim(Hom(E))$. \\
 Montrons que cette famille est libre : \\
-On pose $k\%n$ le reste de la division euclidienne de k par n. \\
-On pose $k//n$ le quotient de la division euclidienne de k par n. \\
-On pose $u_k=e_{(k\%n)+1,(k//n)+1}$. \\
-Soit $\lambda_1,...,\lambda_{n^2}$ tel que $\sum_{k=1}^{n^2} \lambda_k u_k =0$ \\
-On donc pour tout $i \in \llbracket1,n\rrbracket$ : \\
-$\sum_{k=1}^{n^2} \lambda_k u_k(e_i) =0$ \\
-$\sum_{k=0}^{n-1} \lambda_{kn+i} e_{(k+i)\% (n+1)} =0$ \\
-or la famille $(e_{(k+i)\% (n+1)})_{ 0\leq k\leq n-1}=(e_i)_{ 1\leq i\leq n}$ \\
+Soit $(\lambda_{i,j})_{1 \leq i,j \leq n}$ tel que $\sum_{i,j \in \llbracket 1 , n \rrbracket^2} \lambda_{i,j} e_{i,j} =0$ \\
+On donc pour tout $k \in \llbracket1,n\rrbracket$ : \\
+$\sum_{i,j \in \llbracket 1 , n \rrbracket^2} \lambda_{i,j} e_{i,j}(e_k) =0$ \\
+$\sum_{j=1}^{n} \lambda_{k,j} e_j =0$ \\
 On a donc comme $(e_i)_{ 1\leq i \leq n}$ est libre : \\
-$\forall i \in \llbracket1,n\rrbracket \forall k \in \llbracket0,n-1\rrbracket, \lambda_{kn+i}=0$ \\
-On a donc :  $\forall k \in \llbracket1,n^2\rrbracket \lambda_k=0$ \\
+$\forall k \in \llbracket1,n\rrbracket \forall j \in \llbracket 1,n \rrbracket, \lambda_{k,j}=0$ \\
 donc $(e_{i,j})_{ 1\leq i,j \leq n}$ est libre et a pour cardinal la dimension de Hom(E) donc c'est une base. \\ \\
 Montrons que $\overline{\psi} \circ \varphi^{-1}(e_{i,j})=tr(e_{i,j})$ : \\
 Montrons que $\varphi(e^\ast_i \otimes e_{j})= e_{i,j}$ \\
