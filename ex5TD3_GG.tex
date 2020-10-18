@@ -35,11 +35,11 @@ On a donc comme $(e_i)_{ 1\leq i \leq n}$ est libre : \\
 $\forall k \in \llbracket1,n\rrbracket \forall j \in \llbracket 1,n \rrbracket, \lambda_{k,j}=0$ \\
 donc $(e_{i,j})_{ 1\leq i,j \leq n}$ est libre et a pour cardinal la dimension de Hom(E) donc c'est une base. \\ \\
 Montrons que $\overline{\psi} \circ \varphi^{-1}(e_{i,j})=tr(e_{i,j})$ : \\
-Montrons que $\varphi(e^\ast_i \otimes e_{j})= e_{i,j}$ \\
+Montrons que $\varphi(e^\ast_i \otimes e_{j})= e_{i,j}$ où $(e^*_i)_{ 1\leq i\leq n}$ sont les formes linéaires coordonnées à la base $(e_i)_{ 1\leq i \leq n}$ \\
 $\varphi(e^\ast_i \otimes e_{j})$  est l'application $z \rightarrow e^*_i(z)e_j$ \\
 Il s'agit donc de l'application qui pour $k\in \llbracket1,n\rrbracket$ : \\
 $\varphi(e^\ast_i \otimes e_{j})(e_k)=\begin{cases}
-e_j \ si \ k=j \\
+e_j \ si \ i=k \\
 0 \ sinon \\
 \end{cases}$ \\
 donc $\varphi(e^\ast_i \otimes e_{j})= e_{i,j}$. \\
@@ -54,8 +54,9 @@ $\overline{\psi} \circ \varphi^{-1}(u)= tr(\sum_{ 1 \leq i,j\leq n}\lambda_{i,j}
 Donc $\overline{\psi} \circ \varphi^{-1}=tr$ \\
 \\
 4) Cherchons $t\in E^* \otimes F$ tel que $rg(\varphi(t))\geq 2$. \\
-Comme $dim(E)\geq 2$ il existe $e_1$ et $e_2$ deux vecteur non colinéaire de E, on complète cette famille libre $(e_1,e_2)$ en une base de E $(e_i)_{1\leq i \leq n}$. On considère $e^*_i \in E^*$ les application linéaire canonique associé à cette base. \\
-de même avec $m=dim(F) \geq 2$ on construit $(f_i){1\leq i \leq m}$ une base de F. \\
+Comme $dim(E)\geq 2$ il existe $e_1$ et $e_2$ deux vecteur non colinéaire de E, on complète cette famille libre $(e_1,e_2)$ en une base de E $(e_i)_{1\leq i \leq n}$.  \\
+On considère $e^*_i \in E^*$ les formes linéaire coordonnées dans la base $e_i$ à cette base. \\
+De même avec $m=dim(F) \geq 2$ on construit $(f_i)_{1\leq i \leq m}$ une base de F. \\
 On pose $t=e^*_1 \otimes f_1 + e^*_2 \otimes f_2$ \\
 on a donc $\varphi(t)$ est l'application $z \in E \rightarrow e^*_1(z) f_1 + e^*_2(z) f_2$. \\
 On a donc $\varphi(t)(e_1)=f_1$ et $\varphi(t)(e_2)=f_2$ donc $(f_1,f_2) \in Im(\varphi(t))$ \\
