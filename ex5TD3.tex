@@ -60,8 +60,8 @@
    On a donc comme $(e_{i,j})_{ 1 \leq i,j \leq n}$ est une base on a pour $u \in Hom(E)$ : \\
    $\overline{\psi} \circ \varphi^{-1}(u)=\overline{\psi} \circ \varphi^{-1}(\sum_{ 1 \leq i,j\leq n} \lambda_{i,j} e_{i,j})=\sum_{ 1 \leq i,j\leq n} \lambda_{i,j}\overline{\psi} \circ \varphi^{-1}(e_{i,j})=\sum_{ 1 \leq i,j\leq n}\lambda_{i,j} tr(e_{i,j})$ \\
    $\overline{\psi} \circ \varphi^{-1}(u)= tr(\sum_{ 1 \leq i,j\leq n}\lambda_{i,j} e_{i,j})=tr(u)$ \\
-   Donc $\overline{\psi} \circ \varphi^{-1}=tr$ \\
-   \\
+   Donc $\overline{\psi} \circ \varphi^{-1}=tr$
+   \newpage
     \item \'Ecrivons $t$ comme somme de $\r$ tenseurs simples :\\
         $t = \sum_{i=1}^\r \lambda_i \otimes x_i$, avec $\lambda_i \in E^\ast$ et $x_i \in F$ pour $1 \leq i \leq \r$ \\
         Soit $z\in \ker\varphi(t)$.\\
@@ -98,13 +98,13 @@
     \item
     Cherchons $t\in E^* \otimes F$ tel que $rg(\varphi(t))\geq 2$. \\
     Comme $dim(E)\geq 2$ il existe $e_1$ et $e_2$ deux vecteur non colinéaire de E, on complète cette famille libre $(e_1,e_2)$ en une base de E $(e_i)_{1\leq i \leq n}$.  \\
-    On considère $e^*_i \in E^*$ les formes linéaire coordonnées dans la base $e_i$ à cette base. \\
+    On considère $e^*_i \in E^*$ les formes linéaire coordonnées dans la base $(e_i)_{1 \leq i \leq n}$ à cette base. \\
     De même avec $m=dim(F) \geq 2$ on construit $(f_i)_{1\leq i \leq m}$ une base de F. \\
     On pose $t=e^*_1 \otimes f_1 + e^*_2 \otimes f_2$ \\
-    on a donc $\varphi(t)$ est l'application $z \in E \rightarrow e^*_1(z) f_1 + e^*_2(z) f_2$. \\
-    On a donc $\varphi(t)(e_1)=f_1$ et $\varphi(t)(e_2)=f_2$ donc $(f_1,f_2) \in Im(\varphi(t))$ \\
+    On a donc $\varphi(t)$ est l'application $z \in E \rightarrow e^*_1(z) f_1 + e^*_2(z) f_2$. \\
+    On a donc $\varphi(t)(e_1)=f_1$ et $\varphi(t)(e_2)=f_2$ donc $(f_1,f_2) \in Im(\varphi(t))^2$ \\
     Comme $Im(\varphi(t))$ est un espace vectoriel, $Vect(f_1,f_2) \subset Im(\varphi(t))$ \\
-    On a donc comme $f_1$ et $f_2$ ne sont pas colinéaire $l(t)=rg(\varphi(t)=dim(Im(\varphi(t))) \geq 2$ \\
+    On a donc comme $f_1$ et $f_2$ ne sont pas colinéaire $l(t)=rg(\varphi(t))=dim(Im(\varphi(t))) \geq 2$ \\
     donc t ne peut s'écrire comme un tenseur simple.
 
 \end{enumerate}
